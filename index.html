@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Web App - GitHub Pages</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            line-height: 1.6; 
+            background-color: #f8f9fa; 
+            color: #343a40; 
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1, h2 { 
+            color: #007bff; 
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-top: 25px;
+        }
+        h1 { font-size: 2.5em; text-align: center; margin-bottom: 30px;}
+        h2 { font-size: 1.8em; margin-bottom: 15px;}
+        nav { 
+            margin-bottom: 30px; 
+            background-color: #e2f0ff; 
+            padding: 15px; 
+            border-radius: 8px; 
+            text-align: center;
+        }
+        nav button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        nav button:hover { 
+            background-color: #0056b3; 
+            transform: translateY(-2px);
+        }
+        nav button.active-btn {
+            background-color: #0056b3;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .content-section {
+            background-color: #ffffff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            display: none; /* Hidden by default */
+            border: 1px solid #dee2e6;
+        }
+        .content-section.active {
+            display: block; /* Shown when active */
+        }
+        pre, code {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            white-space: pre-wrap; /* For text and JSON */
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            border: 1px solid #ced4da;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Static Web App</h1>
+        <p>This is a small static web application demonstrating various content types, intended for publishing on GitHub Pages. Use the navigation below to explore the different "files" by clicking the corresponding buttons.</p>
+
+        <nav>
+            <button id="btn-ashravan" onclick="showContent('ashravan', this)">ashravan.txt</button>
+            <button id="btn-dilemma" onclick="showContent('dilemma', this)">dilemma.json</button>
+            <button id="btn-about" onclick="showContent('about', this)">about.md</button>
+            <button id="btn-pelican" onclick="showContent('pelican', this)">pelican.svg</button>
+            <button id="btn-restaurant" onclick="showContent('restaurant', this)">restaurant.json</button>
+            <button id="btn-prediction" onclick="showContent('prediction', this)">prediction.json</button>
+            <button id="btn-license" onclick="showContent('license', this)">LICENSE</button>
+            <button id="btn-uid" onclick="showContent('uid', this)">uid.txt</button>
+        </nav>
+
+        <div id="output">
+            <div id="ashravan" class="content-section active">
+                <h2>ashravan.txt - Brandon Sanderson Short Story</h2>
+                <p>A short story about Ashravan after Shai restores him, building up to a dramatic climax.</p>
+                <pre>
+Ashravan, the restored Emperor, sat upon the Throne of the Bloodwood. The scent of polished rosewood and ancient power filled the air, yet it was different now. The heavy weight of decisions, once a mere formality for his past self—the one Shai had so artfully replaced—now pressed upon him with genuine gravitas. A famine gripped the eastern provinces, exacerbated by corrupt governors who hoarded grain. The old Ashravan would have simply executed them, swiftly and without a second thought. But this Ashravan, Shai’s creation, felt the suffering of his people, understood the systemic rot.
+
+He had called for a council, not of sycophants, but of genuine advisors, many of whom he had once dismissed. Lord Kaelen, his most trusted strategist, presented the dire options: a swift, brutal crackdown to enforce order, risking widespread unrest, or a slower, more diplomatic approach that might fail to alleviate the immediate suffering. The old Ashravan's shadow, a phantom echo of impatience and cruelty, whispered in his mind. "Execute them all. Instill fear. It's the only way."
+
+But the new Ashravan saw beyond fear. He saw the faces of starving children, the desperation in their parents' eyes. He remembered the faint, almost imperceptible tremor in Shai’s hand as she applied the final stamp, infusing him with empathy, with a desire to truly *serve*.
+
+Then came the news: a large contingent of rebellious peasants, led by a charismatic former general, marched towards the capital, demanding his abdication and an end to the corruption. This was it. The moment of truth. Lord Kaelen urged military action, to crush the uprising before it reached the city gates. The old Ashravan would have relished the battle.
+
+Ashravan rose, his movements deliberate. "No," he declared, his voice resonating with an authority born not of tyranny, but of conviction. "I will meet them. Alone." Kaelen gasped. "Your Majesty, it's madness! They will tear you apart!" But Ashravan's gaze was firm. "If they seek justice, I will offer it. If they seek a tyrant, they will find only a man willing to listen." He would stand before them, unarmed, ready to face the consequences of both his past and his present, a dramatic climax of a true leader forged in a crucible of altered identity and newfound purpose.
+                </pre>
+            </div>
+
+            <div id="dilemma" class="content-section">
+                <h2>dilemma.json - Autonomous Vehicle Dilemma</h2>
+                <p>A JSON object describing an ethical dilemma for an autonomous vehicle.</p>
+                <pre><code>{
+  "people": 6,
+  "case_1": {
+    "swerve": true,
+    "reason": "From a purely utilitarian perspective, the goal is to minimize harm, which means saving as many lives as possible. Swerving to hit 1 person instead of 2 results in fewer casualties. Most ethical frameworks applied to autonomous vehicles, when forced into such a choice, would prioritize minimizing the number of deaths."
+  },
+  "case_2": {
+    "swerve": true,
+    "reason": "When additional information (criminals vs. child) is introduced, the ethical calculus often changes. While some frameworks argue against valuing lives differently, the widely accepted principle of protecting the vulnerable and innocent (the child) would likely lead to swerving. This implies a controversial decision to 'value' lives based on social context or perceived innocence, a major ongoing debate in AI ethics and a deviation from purely quantitative harm minimization."
+  }
+}</code></pre>
+            </div>
+
+            <div id="about" class="content-section">
+                <h2>about.md - About Me</h2>
+                <p>A brief self-description in three words.</p>
+                <p>
+                    Curious, Analytical, Adaptive.
+                </p>
+            </div>
+
+            <div id="pelican" class="content-section">
+                <h2>pelican.svg - Pelican on a Bicycle</h2>
+                <p>An SVG image of a pelican enjoying a ride.</p>
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="background-color: #c7e0ff;">
+                  <!-- Sky/Background -->
+                  <rect x="0" y="0" width="800" height="600" fill="#c7e0ff"/>
+                  <!-- Sun -->
+                  <circle cx="700" cy="100" r="50" fill="#ffeb3b"/>
+                  <!-- Ground -->
+                  <rect x="0" y="500" width="800" height="100" fill="#a0d99d"/>
+
+                  <!-- Bicycle Wheels -->
+                  <circle cx="200" cy="450" r="45" fill="#333" stroke="#000" stroke-width="5"/>
+                  <circle cx="450" cy="450" r="45" fill="#333" stroke="#000" stroke-width="5"/>
+
+                  <!-- Bicycle Frame -->
+                  <line x1="200" y1="450" x2="325" y2="350" stroke="#f00" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="325" y1="350" x2="450" y2="450" stroke="#f00" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="200" y1="450" x2="400" y2="300" stroke="#f00" stroke-width="10" stroke-linecap="round"/>
+                  <line x1="325" y1="350" x2="350" y2="280" stroke="#f00" stroke-width="10" stroke-linecap="round"/> <!-- Seat post -->
+                  <line x1="400" y1="300" x2="450" y2="280" stroke="#f00" stroke-width="10" stroke-linecap="round"/> <!-- Handlebars -->
+                  <circle cx="350" cy="280" r="10" fill="#666"/> <!-- Seat -->
+                  <circle cx="450" cy="280" r="10" fill="#666"/> <!-- Handlebar end -->
+                  <line x1="450" y1="280" x2="480" y2="250" stroke="#f00" stroke-width="8" stroke-linecap="round"/> <!-- Handlebar -->
+                  <line x1="320" y1="450" x2="320" y2="400" stroke="#f00" stroke-width="5"/> <!-- Pedal stem -->
+                  <circle cx="320" cy="400" r="12" fill="#555"/> <!-- Pedal -->
+
+
+                  <!-- Pelican Body -->
+                  <ellipse cx="370" cy="300" rx="90" ry="60" fill="#fff" stroke="#000" stroke-width="3"/>
+                  <!-- Pelican Head -->
+                  <circle cx="450" cy="240" r="40" fill="#fff" stroke="#000" stroke-width="3"/>
+                  <!-- Pelican Eye -->
+                  <circle cx="460" cy="230" r="8" fill="#000"/>
+                  <!-- Pelican Beak -->
+                  <path d="M480 230 Q550 250 580 270 L580 290 Q550 270 480 250 Z" fill="#ffc107" stroke="#000" stroke-width="3"/>
+                  <path d="M480 250 C500 270 550 290 580 290 C550 310 500 330 480 310 Z" fill="#ffecb3" stroke="#000" stroke-width="2"/> <!-- Pouch -->
+
+                  <!-- Pelican Wings -->
+                  <path d="M300 280 Q350 200 400 250 Q380 300 300 280 Z" fill="#eee" stroke="#000" stroke-width="3"/>
+                  <path d="M300 320 Q350 400 400 350 Q380 300 300 320 Z" fill="#eee" stroke="#000" stroke-width="3"/>
+
+                  <!-- Pelican Legs on pedals -->
+                  <line x1="330" y1="360" x2="320" y2="400" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="360" y1="360" x2="380" y2="400" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="320" cy="400" r="8" fill="#000"/> <!-- foot -->
+                  <circle cx="380" cy="400" r="8" fill="#000"/> <!-- foot -->
+
+                </svg>
+            </div>
+
+            <div id="restaurant" class="content-section">
+                <h2>restaurant.json - Kolkata Restaurant Recommendation</h2>
+                <p>A JSON object recommending a good restaurant in Kolkata.</p>
+                <pre><code>{
+  "city": "Kolkata",
+  "lat": 22.5489,
+  "long": 88.3516,
+  "name": "Peter Cat",
+  "what_to_eat": "Chelo Kebab (a unique Iranian-style dish with seasoned minced meat kebabs, buttered rice, and a fried egg)"
+}</code></pre>
+            </div>
+
+            <div id="prediction" class="content-section">
+                <h2>prediction.json - Fed Funds Rate Prediction</h2>
+                <p>A JSON object with a prediction for the Fed Funds rate by December 2025.</p>
+                <pre><code>{
+  "rate": 0.0325,
+  "reason": "By December 2025, it's anticipated that the Federal Reserve will have implemented several rate cuts from current levels, assuming inflation continues its downward trend towards the 2% target and economic growth moderates. However, the exact path will depend on evolving economic data, labor market conditions, and global factors. A rate of 3.0-3.5% (midpoint 3.25%) reflects a more normalized monetary policy stance compared to the elevated rates of 2023-2024, but still above pre-pandemic lows to provide a buffer against future inflationary pressures."
+}</code></pre>
+            </div>
+
+            <div id="license" class="content-section">
+                <h2>LICENSE - MIT License</h2>
+                <p>The standard MIT License.</p>
+                <pre>
+MIT License
+
+Copyright (c) 2024 The Author
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+                </pre>
+            </div>
+
+            <div id="uid" class="content-section">
+                <h2>uid.txt - Unique Identifier</h2>
+                <p>This file contains a unique identifier, provided as-is.</p>
+                <pre>
+a1b2c3d4-e5f6-7890-1234-567890abcdef
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initially activate the first button and its content
+            document.getElementById('btn-ashravan').classList.add('active-btn');
+            document.getElementById('ashravan').classList.add('active');
+        });
+
+        function showContent(id, clickedButton) {
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Deactivate all buttons
+            document.querySelectorAll('nav button').forEach(button => {
+                button.classList.remove('active-btn');
+            });
+
+            // Show the requested section
+            document.getElementById(id).classList.add('active');
+            // Activate the clicked button
+            if (clickedButton) {
+                clickedButton.classList.add('active-btn');
+            }
+        }
+    </script>
+</body>
+</html>
